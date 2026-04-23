@@ -17,21 +17,36 @@ export const CharacterCard = ({ name, level, xp, xpToNext, skills }: Props) => {
     <div className="quest-card-lg bg-quest-cream p-5 space-y-5">
       {/* Avatar + level */}
       <div className="flex items-center gap-4">
-        <motion.div
-          animate={{ y: [0, -4, 0] }}
-          transition={{ duration: 2.4, repeat: Infinity, ease: "easeInOut" }}
-          className="relative w-20 h-20 rounded-full border-[3px] border-ink bg-quest-pink flex items-center justify-center overflow-hidden shrink-0"
-          style={{ boxShadow: "4px 4px 0 0 hsl(var(--ink))" }}
-        >
-          <img src={fiaSrc} alt="Fia mascot" className="w-[115%] h-[115%] object-cover object-top" draggable={false} />
-          <span className="absolute -bottom-2 -right-2 w-9 h-9 rounded-full border-2 border-ink bg-quest-sun flex items-center justify-center font-quest font-black text-sm z-10">
-            {level}
-          </span>
-        </motion.div>
+        <div className="relative w-24 h-24 shrink-0">
+          {/* Soft ground glow puddle for 3D lift */}
+          <div
+            className="absolute left-1/2 -translate-x-1/2 bottom-0 w-20 h-3 rounded-[50%] blur-md"
+            style={{ background: "hsl(var(--forest) / 0.35)" }}
+          />
+          <motion.div
+            animate={{ y: [0, -6, 0] }}
+            transition={{ duration: 2.4, repeat: Infinity, ease: "easeInOut" }}
+            className="relative w-full h-full"
+            style={{ filter: "drop-shadow(0 10px 8px hsl(var(--forest) / 0.28)) drop-shadow(0 3px 0 hsl(var(--forest) / 0.18))" }}
+          >
+            <img
+              src={fiaSrc}
+              alt="Fia mascot"
+              className="w-full h-full object-contain"
+              draggable={false}
+            />
+            <span
+              className="absolute -bottom-1 -right-1 w-9 h-9 rounded-full border-2 border-forest bg-gold flex items-center justify-center font-quest font-black text-sm text-forest"
+              style={{ boxShadow: "0 4px 8px -2px hsl(var(--forest) / 0.4), inset 0 -2px 0 0 hsl(var(--forest) / 0.2)" }}
+            >
+              {level}
+            </span>
+          </motion.div>
+        </div>
         <div className="min-w-0">
-          <p className="font-quest text-xs uppercase tracking-widest text-muted-foreground">player</p>
-          <h3 className="font-quest font-black text-2xl leading-tight truncate">{name}</h3>
-          <p className="font-quest text-sm text-muted-foreground">Level {level} Explorer</p>
+          <p className="font-quest text-xs uppercase tracking-widest text-olive">player</p>
+          <h3 className="font-quest font-black text-2xl leading-tight truncate text-forest">{name}</h3>
+          <p className="font-quest text-sm text-olive">Level {level} Explorer</p>
         </div>
       </div>
 

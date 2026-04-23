@@ -37,7 +37,10 @@ export const Mascot = ({ mood = "happy", size = 96, className = "" }: MascotProp
         height={size}
         draggable={false}
         className="w-full h-full object-contain"
-        style={{ filter: "drop-shadow(0 4px 0 hsl(var(--ink) / 0.18))" }}
+        style={{
+          filter:
+            "drop-shadow(0 10px 12px hsl(var(--forest) / 0.32)) drop-shadow(0 3px 0 hsl(var(--forest) / 0.18))",
+        }}
       />
     </motion.div>
   );
