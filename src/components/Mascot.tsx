@@ -47,7 +47,7 @@ export const Mascot = ({ mood = "happy", size = 96, className = "" }: MascotProp
         alt={`Fia the fox — ${mood}`}
         width={size}
         height={size}
-        className="w-full h-full object-contain select-none pointer-events-none drop-shadow-[0_8px_12px_rgba(47,62,52,0.25)]"
+        className="w-full h-full object-contain select-none pointer-events-none"
         draggable={false}
       />
     </motion.div>
