@@ -75,7 +75,7 @@ export const Roadmap = ({ career, current, completed, onComplete, onOpenProfile,
                           onClick={() => !isLocked && setOpenId(m.id)}
                           whileTap={{ scale: 0.95 }}
                           className={`relative w-28 h-28 rounded-full border-[3px] border-ink flex flex-col items-center justify-center transition-all ${
-                            isDone ? "bg-lime" : isCurrent ? "bg-coral animate-pulse-glow" : isLocked ? "bg-muted" : "bg-card"
+                            isDone ? "bg-violet-600 text-white" : isCurrent ? "bg-coral animate-pulse-glow" : isLocked ? "bg-muted" : "bg-card"
                           } ${!isLocked ? "hover:scale-105 cursor-pointer" : "cursor-not-allowed opacity-70"} shadow-sticker-sm ${side}`}
                         >
                           <span className="text-3xl">{ICONS[m.type]}</span>
