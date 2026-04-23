@@ -8,110 +8,95 @@
 
 @layer base {
   :root {
-    /* === Fia palette === */
-    /* Neutrals */
-    --background: 36 32% 95%;          /* Warm Cream  #F7F4EF */
-    --foreground: 137 14% 21%;         /* Deep Forest #2F3E34 */
-    --card: 35 28% 90%;                /* Light Sand  #EDE7DE */
-    --card-foreground: 137 14% 21%;
-    --popover: 36 32% 95%;
-    --popover-foreground: 137 14% 21%;
+    /* Paper + ink core */
+    --background: 42 38% 96%;        /* off-white paper */
+    --foreground: 220 15% 8%;        /* deep ink */
 
-    /* Primary = Fox Orange */
-    --primary: 22 70% 56%;             /* #E07A3F */
-    --primary-foreground: 36 32% 97%;
+    --card: 42 38% 98%;
+    --card-foreground: 220 15% 8%;
 
-    /* Secondary = Soft Sage */
-    --secondary: 126 14% 55%;          /* #7A9E7E */
-    --secondary-foreground: 36 32% 97%;
+    --popover: 42 38% 98%;
+    --popover-foreground: 220 15% 8%;
 
-    /* Brand color tokens */
-    --fox: 22 70% 56%;                 /* #E07A3F */
-    --fox-foreground: 36 32% 97%;
-    --sage: 126 14% 55%;               /* #7A9E7E */
-    --sage-foreground: 36 32% 97%;
-    --sand: 35 28% 90%;                /* #EDE7DE */
-    --cream: 36 32% 95%;               /* #F7F4EF */
-    --forest: 137 14% 21%;             /* #2F3E34 */
-    --olive: 100 3% 43%;               /* #6B6F6A */
-    --gold: 43 67% 66%;                /* #E6C36A */
-    --dusty-blue: 198 27% 61%;         /* #7FA7B8 */
-    --terracotta: 13 53% 54%;          /* #C96A4A */
-    --lavender: 261 19% 73%;           /* #B7AFC7 */
+    /* Hero accent: electric lime */
+    --primary: 75 95% 55%;
+    --primary-foreground: 220 15% 8%;
 
-    /* Legacy ink/paper aliases now mapped to forest/cream */
-    --ink: 137 14% 21%;
-    --ink-foreground: 36 32% 95%;
-    --paper: 36 32% 95%;
-    --coral: 13 53% 54%;               /* terracotta */
-    --coral-foreground: 36 32% 97%;
-    --cobalt: 198 27% 61%;             /* dusty blue */
-    --cobalt-foreground: 137 14% 21%;
-    --lime: 126 14% 55%;               /* sage stand-in */
-    --lime-foreground: 36 32% 97%;
+    /* Category coding */
+    --coral: 6 95% 65%;              /* hot coral */
+    --coral-foreground: 0 0% 100%;
+    --cobalt: 225 85% 55%;           /* cobalt blue */
+    --cobalt-foreground: 0 0% 100%;
+    --lime: 75 95% 55%;
+    --lime-foreground: 220 15% 8%;
+    --ink: 220 15% 8%;
+    --ink-foreground: 42 38% 96%;
+    --paper: 42 38% 96%;
 
-    /* Quest palette remapped to Fia tones */
-    --quest-purple: 22 70% 56%;        /* fox */
-    --quest-purple-foreground: 36 32% 97%;
-    --quest-mint: 126 14% 55%;         /* sage */
-    --quest-mint-foreground: 36 32% 97%;
-    --quest-sun: 43 67% 66%;           /* gold */
-    --quest-pink: 13 53% 54%;          /* terracotta */
-    --quest-sky: 198 27% 61%;          /* dusty blue */
-    --quest-cream: 36 32% 95%;
+    /* Quest palette — Neo-Brutalist meets Soft-Tech */
+    --quest-purple: 270 90% 62%;       /* electric purple */
+    --quest-purple-foreground: 0 0% 100%;
+    --quest-mint: 156 70% 65%;         /* mint green */
+    --quest-mint-foreground: 220 15% 8%;
+    --quest-sun: 45 100% 62%;          /* warm sunshine */
+    --quest-pink: 330 90% 72%;         /* bubblegum */
+    --quest-sky: 200 95% 70%;          /* soft sky */
+    --quest-cream: 45 60% 96%;         /* soft surface */
 
-    --muted: 35 22% 86%;
-    --muted-foreground: 100 3% 43%;    /* olive */
+    --secondary: 42 25% 90%;
+    --secondary-foreground: 220 15% 8%;
 
-    --accent: 22 70% 56%;              /* fox */
-    --accent-foreground: 36 32% 97%;
+    --muted: 42 20% 88%;
+    --muted-foreground: 220 10% 40%;
 
-    --destructive: 13 53% 54%;
-    --destructive-foreground: 36 32% 97%;
+    --accent: 75 95% 55%;
+    --accent-foreground: 220 15% 8%;
 
-    --border: 137 14% 21%;             /* forest borders */
-    --input: 35 22% 82%;
-    --ring: 22 70% 56%;
+    --destructive: 6 95% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 220 15% 8%;            /* hard ink borders */
+    --input: 220 15% 85%;
+    --ring: 75 95% 55%;
 
     --radius: 1.25rem;
 
-    /* Signature shadow — softer forest offset */
-    --shadow-sticker: 6px 6px 0 0 hsl(var(--forest));
-    --shadow-sticker-sm: 3px 3px 0 0 hsl(var(--forest));
-    --shadow-sticker-lg: 10px 10px 0 0 hsl(var(--forest));
-    --shadow-soft: 0 8px 24px -8px hsl(var(--forest) / 0.25);
-    --shadow-3d: 0 18px 30px -10px hsl(var(--forest) / 0.35), 0 6px 10px -4px hsl(var(--forest) / 0.2);
+    /* Signature shadow — chunky offset, sticker feel */
+    --shadow-sticker: 6px 6px 0 0 hsl(var(--ink));
+    --shadow-sticker-sm: 3px 3px 0 0 hsl(var(--ink));
+    --shadow-sticker-lg: 10px 10px 0 0 hsl(var(--ink));
+    --shadow-soft: 0 8px 24px -8px hsl(var(--ink) / 0.25);
 
-    --sidebar-background: 36 32% 95%;
-    --sidebar-foreground: 137 14% 21%;
-    --sidebar-primary: 22 70% 56%;
-    --sidebar-primary-foreground: 36 32% 97%;
-    --sidebar-accent: 35 28% 90%;
-    --sidebar-accent-foreground: 137 14% 21%;
-    --sidebar-border: 137 14% 21%;
-    --sidebar-ring: 22 70% 56%;
+    --sidebar-background: 42 38% 96%;
+    --sidebar-foreground: 220 15% 8%;
+    --sidebar-primary: 75 95% 55%;
+    --sidebar-primary-foreground: 220 15% 8%;
+    --sidebar-accent: 42 25% 90%;
+    --sidebar-accent-foreground: 220 15% 8%;
+    --sidebar-border: 220 15% 8%;
+    --sidebar-ring: 75 95% 55%;
   }
 
   .dark {
-    --background: 137 18% 10%;
-    --foreground: 36 32% 95%;
-    --card: 137 14% 14%;
-    --card-foreground: 36 32% 95%;
-    --popover: 137 14% 14%;
-    --popover-foreground: 36 32% 95%;
-    --primary: 22 70% 56%;
-    --primary-foreground: 137 18% 10%;
-    --secondary: 126 14% 35%;
-    --secondary-foreground: 36 32% 95%;
-    --muted: 137 10% 20%;
-    --muted-foreground: 36 12% 70%;
-    --accent: 22 70% 56%;
-    --accent-foreground: 137 18% 10%;
-    --destructive: 13 53% 54%;
-    --destructive-foreground: 36 32% 97%;
-    --border: 36 32% 95%;
-    --input: 137 10% 22%;
-    --ring: 22 70% 56%;
+    --background: 220 18% 8%;
+    --foreground: 42 38% 96%;
+    --card: 220 18% 11%;
+    --card-foreground: 42 38% 96%;
+    --popover: 220 18% 11%;
+    --popover-foreground: 42 38% 96%;
+    --primary: 75 95% 55%;
+    --primary-foreground: 220 15% 8%;
+    --secondary: 220 15% 18%;
+    --secondary-foreground: 42 38% 96%;
+    --muted: 220 15% 18%;
+    --muted-foreground: 220 10% 65%;
+    --accent: 75 95% 55%;
+    --accent-foreground: 220 15% 8%;
+    --destructive: 6 95% 60%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 42 38% 96%;
+    --input: 220 15% 22%;
+    --ring: 75 95% 55%;
   }
 }
 
@@ -196,23 +181,11 @@
   .bg-lime { background-color: hsl(var(--lime)); }
   .bg-coral { background-color: hsl(var(--coral)); }
   .bg-cobalt { background-color: hsl(var(--cobalt)); }
-  .bg-fox { background-color: hsl(var(--fox)); }
-  .bg-sage { background-color: hsl(var(--sage)); }
-  .bg-sand { background-color: hsl(var(--sand)); }
-  .bg-cream { background-color: hsl(var(--cream)); }
-  .bg-gold { background-color: hsl(var(--gold)); }
-  .bg-dusty-blue { background-color: hsl(var(--dusty-blue)); }
-  .bg-terracotta { background-color: hsl(var(--terracotta)); }
   .text-ink { color: hsl(var(--ink)); }
   .text-paper { color: hsl(var(--paper)); }
   .text-lime { color: hsl(var(--lime)); }
   .text-coral { color: hsl(var(--coral)); }
   .text-cobalt { color: hsl(var(--cobalt)); }
-  .text-fox { color: hsl(var(--fox)); }
-  .text-sage { color: hsl(var(--sage)); }
-  .text-forest { color: hsl(var(--forest)); }
-  .text-olive { color: hsl(var(--olive)); }
-  .text-gold { color: hsl(var(--gold)); }
   .bg-quest-purple { background-color: hsl(var(--quest-purple)); }
   .bg-quest-mint { background-color: hsl(var(--quest-mint)); }
   .bg-quest-sun { background-color: hsl(var(--quest-sun)); }
@@ -228,5 +201,4 @@
   .shadow-sticker { box-shadow: var(--shadow-sticker); }
   .shadow-sticker-sm { box-shadow: var(--shadow-sticker-sm); }
   .shadow-sticker-lg { box-shadow: var(--shadow-sticker-lg); }
-  .shadow-3d { box-shadow: var(--shadow-3d); }
 }
