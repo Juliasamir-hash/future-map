@@ -50,6 +50,12 @@ export default {
         lime: { DEFAULT: "hsl(var(--lime))", foreground: "hsl(var(--lime-foreground))" },
         coral: { DEFAULT: "hsl(var(--coral))", foreground: "hsl(var(--coral-foreground))" },
         cobalt: { DEFAULT: "hsl(var(--cobalt))", foreground: "hsl(var(--cobalt-foreground))" },
+        sage: "hsl(var(--secondary))",
+        sand: "hsl(var(--card))",
+        cream: "hsl(var(--paper))",
+        forest: "hsl(var(--ink))",
+        gold: "hsl(var(--lime))",
+        terracotta: "hsl(var(--coral))",
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",
           foreground: "hsl(var(--sidebar-foreground))",
@@ -80,8 +86,8 @@ export default {
           "50%": { transform: "rotate(3deg)" },
         },
         "pulse-glow": {
-          "0%,100%": { boxShadow: "0 0 0 0 hsl(var(--lime) / 0.7)" },
-          "50%": { boxShadow: "0 0 0 14px hsl(var(--lime) / 0)" },
+          "0%,100%": { boxShadow: "0 0 0 0 hsl(var(--primary) / 0.7)" },
+          "50%": { boxShadow: "0 0 0 14px hsl(var(--primary) / 0)" },
         },
       },
       animation: {
