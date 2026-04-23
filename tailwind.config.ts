@@ -50,12 +50,6 @@ export default {
         lime: { DEFAULT: "hsl(var(--lime))", foreground: "hsl(var(--lime-foreground))" },
         coral: { DEFAULT: "hsl(var(--coral))", foreground: "hsl(var(--coral-foreground))" },
         cobalt: { DEFAULT: "hsl(var(--cobalt))", foreground: "hsl(var(--cobalt-foreground))" },
-        "quest-purple": { DEFAULT: "hsl(var(--quest-purple))", foreground: "hsl(var(--quest-purple-foreground))" },
-        "quest-mint": { DEFAULT: "hsl(var(--quest-mint))", foreground: "hsl(var(--quest-mint-foreground))" },
-        "quest-sun": "hsl(var(--quest-sun))",
-        "quest-pink": "hsl(var(--quest-pink))",
-        "quest-sky": "hsl(var(--quest-sky))",
-        "quest-cream": "hsl(var(--quest-cream))",
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",
           foreground: "hsl(var(--sidebar-foreground))",

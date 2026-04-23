@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Caveat:wght@500;700&family=Inter:wght@400;500;600;700;800&family=Lexend:wght@400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Caveat:wght@500;700&family=Inter:wght@400;500;600;700;800&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -32,16 +32,6 @@
     --ink: 220 15% 8%;
     --ink-foreground: 42 38% 96%;
     --paper: 42 38% 96%;
-
-    /* Quest palette — Neo-Brutalist meets Soft-Tech */
-    --quest-purple: 270 90% 62%;       /* electric purple */
-    --quest-purple-foreground: 0 0% 100%;
-    --quest-mint: 156 70% 65%;         /* mint green */
-    --quest-mint-foreground: 220 15% 8%;
-    --quest-sun: 45 100% 62%;          /* warm sunshine */
-    --quest-pink: 330 90% 72%;         /* bubblegum */
-    --quest-sky: 200 95% 70%;          /* soft sky */
-    --quest-cream: 45 60% 96%;         /* soft surface */
 
     --secondary: 42 25% 90%;
     --secondary-foreground: 220 15% 8%;
@@ -143,36 +133,6 @@
   .chip {
     @apply inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full border-2 border-ink bg-paper text-sm font-semibold;
   }
-
-  /* Quest UI components */
-  .quest-card {
-    @apply border-[3px] border-ink rounded-3xl bg-card;
-    box-shadow: 6px 6px 0 0 hsl(var(--ink));
-  }
-  .quest-card-lg {
-    @apply border-[3px] border-ink rounded-[2rem] bg-card;
-    box-shadow: 10px 10px 0 0 hsl(var(--ink));
-  }
-  .quest-squish {
-    @apply transition-transform duration-150 active:scale-95 hover:scale-[1.03];
-  }
-  .quest-glow-purple {
-    box-shadow: 0 0 0 0 hsl(var(--quest-purple) / 0.6);
-    animation: quest-pulse-purple 2s ease-out infinite;
-  }
-  .quest-glow-mint {
-    box-shadow: 0 0 0 0 hsl(var(--quest-mint) / 0.7);
-    animation: quest-pulse-mint 2s ease-out infinite;
-  }
-}
-
-@keyframes quest-pulse-purple {
-  0%, 100% { box-shadow: 0 0 0 0 hsl(var(--quest-purple) / 0.6); }
-  50% { box-shadow: 0 0 0 16px hsl(var(--quest-purple) / 0); }
-}
-@keyframes quest-pulse-mint {
-  0%, 100% { box-shadow: 0 0 0 0 hsl(var(--quest-mint) / 0.7); }
-  50% { box-shadow: 0 0 0 16px hsl(var(--quest-mint) / 0); }
 }
 
 @layer utilities {
@@ -186,16 +146,6 @@
   .text-lime { color: hsl(var(--lime)); }
   .text-coral { color: hsl(var(--coral)); }
   .text-cobalt { color: hsl(var(--cobalt)); }
-  .bg-quest-purple { background-color: hsl(var(--quest-purple)); }
-  .bg-quest-mint { background-color: hsl(var(--quest-mint)); }
-  .bg-quest-sun { background-color: hsl(var(--quest-sun)); }
-  .bg-quest-pink { background-color: hsl(var(--quest-pink)); }
-  .bg-quest-sky { background-color: hsl(var(--quest-sky)); }
-  .bg-quest-cream { background-color: hsl(var(--quest-cream)); }
-  .text-quest-purple { color: hsl(var(--quest-purple)); }
-  .text-quest-mint { color: hsl(var(--quest-mint)); }
-  .text-quest-sun { color: hsl(var(--quest-sun)); }
-  .font-quest { font-family: 'Lexend', system-ui, sans-serif; }
   .border-ink { border-color: hsl(var(--ink)); }
   .ring-ink { --tw-ring-color: hsl(var(--ink)); }
   .shadow-sticker { box-shadow: var(--shadow-sticker); }
