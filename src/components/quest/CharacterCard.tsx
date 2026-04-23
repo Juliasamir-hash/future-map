@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { QuestSkill } from "@/lib/quest-data";
+import fiaSrc from "@/assets/mascot-fia.png";
 
 interface Props {
   name: string;
@@ -19,11 +20,11 @@ export const CharacterCard = ({ name, level, xp, xpToNext, skills }: Props) => {
         <motion.div
           animate={{ y: [0, -4, 0] }}
           transition={{ duration: 2.4, repeat: Infinity, ease: "easeInOut" }}
-          className="relative w-20 h-20 rounded-full border-[3px] border-ink bg-quest-pink flex items-center justify-center text-4xl shrink-0"
+          className="relative w-20 h-20 rounded-full border-[3px] border-ink bg-quest-pink flex items-center justify-center overflow-hidden shrink-0"
           style={{ boxShadow: "4px 4px 0 0 hsl(var(--ink))" }}
         >
-          🧑‍🎓
-          <span className="absolute -bottom-2 -right-2 w-9 h-9 rounded-full border-2 border-ink bg-quest-sun flex items-center justify-center font-quest font-black text-sm">
+          <img src={fiaSrc} alt="Fia mascot" className="w-[115%] h-[115%] object-cover object-top" draggable={false} />
+          <span className="absolute -bottom-2 -right-2 w-9 h-9 rounded-full border-2 border-ink bg-quest-sun flex items-center justify-center font-quest font-black text-sm z-10">
             {level}
           </span>
         </motion.div>
